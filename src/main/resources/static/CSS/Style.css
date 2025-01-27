@@ -1,0 +1,82 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 26, 2025, 6:32:30 PM
+    Author     : josep
+*/
+                           /*INDEX*/
+#Title{
+    text-align: center;
+    background: black;
+    color: white;  
+}
+
+#Sub\000020Title{
+    font-size:25px; 
+    color: cyan;  
+}
+
+.Text{
+    
+    font-size:16px;
+}
+
+                          /*INDEX1*/
+                          
+#Title1{
+    text-align: center;
+    background: black;
+    color: white;  
+}
+
+#Sub\000020Title1{
+    font-size:25px; 
+    color: palevioletred;  
+}
+
+.Text1{
+    
+    font-size:16px;
+}                          
+                          
+                          
+                          
+                          /*INDEX2*/
+                          
+#Title2{
+    text-align: center;
+    background: black;
+    color: white;  
+}
+
+#Sub\000020Title2{
+    font-size:25px; 
+    color: lawngreen;  
+}
+
+.Text2{
+    
+    font-size:16px;
+}                          
+                          
+                          
+                          
+                          /*INDEX3*/
+                          
+#Title3{
+    text-align: center;
+    background: black;
+    color: white;  
+}
+
+#Sub\000020Title3{
+    font-size:25px; 
+    color: salmon;  
+}
+
+.Text3{
+    
+    font-size:16px;
+}                          
