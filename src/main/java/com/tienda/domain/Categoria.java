@@ -5,7 +5,13 @@
 
 package com.tienda.domain;
 
-import jakarta.persitence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -20,7 +26,7 @@ public class Categoria implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @Id
-    @GenerateValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Long idCategoria; // id_categoria
     private String descripcion;
