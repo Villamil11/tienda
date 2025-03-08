@@ -2,45 +2,54 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package com.tienda.domain;
 
 
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+import com.tienda.domain.Categoria;
 import lombok.Data;
 
-
+/**
+ *
+ * @author josep
+ */
 
 @Data // Gerera por debajo los set y get
 @Entity
-@Table(name = "categoria")
-public class Categoria implements Serializable {
+@Table(name = "producto")
 
+public class Producto implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
-    private Long idCategoria; // id_categoria
+    @Column(name = "id_producto")   
+    private Long idProducto;
     private String descripcion;
+    private String destalle;
+    private double precio;
+    private int existencias;
     private String rutaImagen;
     private boolean activo;
     
-    @OneToMany
-    @JoinColumn(name = "idCategoria", insertable = false)
-    private List<Producto> productos;
+    @ManyToOne
+    @JoinColumn(name = "idCategoria")
+    private Categoria categoria;
     
-    public Categoria(){
+    public Producto () {
+    
     }
     
-        public Categoria(String descripcion,String rutaImagen, boolean activo)
-    {
+
+    public Producto(String descripcion, String destalle, double precio, int existencias, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
+        this.destalle = destalle;
+        this.precio = precio;
+        this.existencias = existencias;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
     }
-    
+
 }
