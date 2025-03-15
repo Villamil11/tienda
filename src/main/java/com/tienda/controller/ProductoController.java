@@ -40,7 +40,8 @@ public class ProductoController {
     @RequestMapping("/listado")
     public String listado(Model model) {
         List<Producto> productos = productoService.getProductos(false);
-        
+       // List<Producto> productos = productoService.buscarPorExistencias(5);
+       // List<Producto> productos = productoService.buscarPorExistenciasYPrecio(5, 2500);
         List<Categoria> listaCategoriasActivas = categoriaService.getCategorias(true);
         
         model.addAttribute("productos", productos);
